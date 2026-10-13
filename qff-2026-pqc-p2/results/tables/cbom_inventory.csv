@@ -1,0 +1,32 @@
+File,Line,Algorithm,Category,Quantum_Vulnerable,Severity,Target_NIST_Standard,Recommended_Primitive,Hybrid_Migration_Option,Snippet
+app.py,7,RSA,Key Encapsulation / Asymmetric Encryption,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,"from cryptography.hazmat.primitives.asymmetric import rsa, padding"
+app.py,9,ECC / ECDSA,Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,ECDSA (P-256) + ML-DSA-65 Composite,from cryptography.hazmat.primitives.asymmetric import ec
+app.py,14,RSA KeyGen,Key Encapsulation / Asymmetric Encryption,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,SESSION_PRIVATE_KEY = rsa.generate_private_key(
+app.py,20,ECC KeyGen,Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,ECDSA (P-256) + ML-DSA-65 Composite,DEVICE_AUTH_KEY = ec.generate_private_key(ec.SECP256R1())
+app.py,20,ECC Curve (ec.SECP256R1),Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,ECDSA (P-256) + ML-DSA-65 Composite,DEVICE_AUTH_KEY = ec.generate_private_key(ec.SECP256R1())
+app.py,28,MD5 Hash,Cryptographic Hash Function,False,HIGH,FIPS 180-4 / FIPS 202,SHA-256 / SHA-3 / SHAKE-256,N/A,password_hash = hashlib.md5(password.encode()).hexdigest()
+app.py,34,RSA-OAEP/PKCS1 Padding,Key Encapsulation / Asymmetric Encryption,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,padding.OAEP(
+tls_adapter.py,5,Diffie-Hellman (DH),Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,ECDH (P-256) + ML-KEM-768 Hybrid,from cryptography.hazmat.primitives.asymmetric import dh
+tls_adapter.py,6,X25519 (ECDH),Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,from cryptography.hazmat.primitives.asymmetric import x25519
+tls_adapter.py,11,Diffie-Hellman Parameters,Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,ECDH (P-256) + ML-KEM-768 Hybrid,"self.dh_parameters = dh.generate_parameters(generator=2, key_size=2048)"
+tls_adapter.py,14,X25519 KeyGen,Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,self.private_key_x25519 = x25519.X25519PrivateKey.generate()
+tls_adapter.py,15,X25519 KeyGen,Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,"self.peer_public_key = x25519.X25519PublicKey.from_public_bytes(b""0"" * 32)"
+tls_adapter.py,18,X25519 KeyGen,Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,self.shared_key = self.private_key_x25519.exchange(self.peer_public_key)
+crypto_cases.py,6,RSA,Key Encapsulation / Asymmetric Encryption,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,"from cryptography.hazmat.primitives.asymmetric import rsa, dsa, dh, ec, ed25519, x25519"
+crypto_cases.py,6,DSA,Digital Signature,True,CRITICAL,NIST FIPS 204,ML-DSA-65,ML-DSA-65 Direct Migration,"from cryptography.hazmat.primitives.asymmetric import rsa, dsa, dh, ec, ed25519, x25519"
+crypto_cases.py,6,Diffie-Hellman (DH),Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,ECDH (P-256) + ML-KEM-768 Hybrid,"from cryptography.hazmat.primitives.asymmetric import rsa, dsa, dh, ec, ed25519, x25519"
+crypto_cases.py,6,ECC / ECDSA,Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,ECDSA (P-256) + ML-DSA-65 Composite,"from cryptography.hazmat.primitives.asymmetric import rsa, dsa, dh, ec, ed25519, x25519"
+crypto_cases.py,6,Ed25519,Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,Ed25519 + ML-DSA-65 Dual Signature,"from cryptography.hazmat.primitives.asymmetric import rsa, dsa, dh, ec, ed25519, x25519"
+crypto_cases.py,6,X25519 (ECDH),Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,"from cryptography.hazmat.primitives.asymmetric import rsa, dsa, dh, ec, ed25519, x25519"
+crypto_cases.py,11,RSA KeyGen,Key Encapsulation / Asymmetric Encryption,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,"k_rsa = rsa.generate_private_key(public_exponent=65537, key_size=2048)"
+crypto_cases.py,14,DSA KeyGen,Digital Signature,True,CRITICAL,NIST FIPS 204,ML-DSA-65,ML-DSA-65 Direct Migration,k_dsa = dsa.generate_private_key(key_size=2048)
+crypto_cases.py,17,Diffie-Hellman Parameters,Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,ECDH (P-256) + ML-KEM-768 Hybrid,"dh_p = dh.generate_parameters(generator=2, key_size=2048)"
+crypto_cases.py,20,ECC KeyGen,Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,ECDSA (P-256) + ML-DSA-65 Composite,k_ec = ec.generate_private_key(ec.SECP256R1())
+crypto_cases.py,20,ECC Curve (ec.SECP256R1),Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,ECDSA (P-256) + ML-DSA-65 Composite,k_ec = ec.generate_private_key(ec.SECP256R1())
+crypto_cases.py,23,ECC KeyGen,Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,ECDSA (P-256) + ML-DSA-65 Composite,k_ec384 = ec.generate_private_key(ec.SECP384R1())
+crypto_cases.py,23,ECC Curve (ec.SECP384R1),Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,ECDSA (P-256) + ML-DSA-65 Composite,k_ec384 = ec.generate_private_key(ec.SECP384R1())
+crypto_cases.py,26,Ed25519 KeyGen,Digital Signature,True,HIGH,NIST FIPS 204,ML-DSA-65,Ed25519 + ML-DSA-65 Dual Signature,k_ed = ed25519.Ed25519PrivateKey.generate()
+crypto_cases.py,29,X25519 KeyGen,Key Exchange,True,CRITICAL,NIST FIPS 203,ML-KEM-768,X25519 + ML-KEM-768 Hybrid,k_x = x25519.X25519PrivateKey.generate()
+crypto_cases.py,32,MD5 Hash,Cryptographic Hash Function,False,HIGH,FIPS 180-4 / FIPS 202,SHA-256 / SHA-3 / SHAKE-256,N/A,"h_md5 = hashlib.md5(b""test"").hexdigest()"
+crypto_cases.py,35,SHA-1 Hash,Cryptographic Hash Function,False,HIGH,FIPS 180-4 / FIPS 202,SHA-256 / SHA-3 / SHAKE-256,N/A,"h_sha1 = hashlib.sha1(b""test"").hexdigest()"
+crypto_cases.py,38,AES-128,Symmetric Cipher,True,MEDIUM,FIPS 197 (AES),AES-256-GCM,N/A,"c_aes128 = Cipher(algorithms.AES(b""0123456789abcdef""), modes.ECB())"

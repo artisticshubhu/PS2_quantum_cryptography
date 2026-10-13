@@ -1,0 +1,3 @@
+processor_name,processor_qubits,topology,original_qubits,active_physical_qubits,original_depth,transpiled_depth,depth_expansion,original_total_gates,transpiled_total_gates,original_cx,transpiled_cx,cx_overhead_ratio,estimated_swaps,single_qubit_gates,two_qubit_gates,estimated_analytical_fidelity,hardware_footprint_volume,tvd_ideal_vs_noisy,bhattacharyya_fidelity,peak_state_preservation
+Processor_A_Baseline_5Q,5,Linear Chain,4,4,12,52,4.333333333333333,17,72,4,31,7.75,9,38,31,0.7916711780406704,208,0.036376953125,0.9987925224953237,0.9106976744186046
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,4,4,12,45,3.75,17,63,4,22,5.5,6,38,22,0.8282035874906655,180,0.03076171875,0.9991112787469477,0.9318826868495743

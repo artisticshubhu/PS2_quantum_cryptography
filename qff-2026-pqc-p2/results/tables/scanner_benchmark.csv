@@ -1,0 +1,5 @@
+Target,Files,LOC,TP,FP,FN,Precision,Recall,F1_Score,Scan_Time_ms
+Benchmark Corpus (Annotated),1,50,10,0,0,1.0,1.0,1.0,4.2
+Flask Auth Service (Mock),1,46,7,0,0,1.0,1.0,1.0,1.5162000199779868
+Requests TLS Adapter (Mock),1,22,6,0,0,1.0,1.0,1.0,2.319200022611767
+PQC Migrated Service (Control),1,31,0,0,0,1.0,1.0,1.0,1.292400003876537

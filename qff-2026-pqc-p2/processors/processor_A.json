@@ -1,0 +1,30 @@
+{
+  "name": "Processor_A_Baseline_5Q",
+  "num_qubits": 5,
+  "qubit_nodes": [0, 1, 2, 3, 4],
+  "topology_type": "Linear Chain",
+  "undirected_edges": [
+    [0, 1],
+    [1, 2],
+    [2, 3],
+    [3, 4]
+  ],
+  "coupling_map": [
+    [0, 1], [1, 0],
+    [1, 2], [2, 1],
+    [2, 3], [3, 2],
+    [3, 4], [4, 3]
+  ],
+  "basis_gates": ["rz", "sx", "x", "cx"],
+  "noise_model": {
+    "gate_error_1q": 0.001,
+    "gate_error_2q": 0.005,
+    "readout_error": 0.01
+  },
+  "transpilation_baseline": {
+    "optimization_level": 1,
+    "seed": 42,
+    "shots": 4096
+  },
+  "architectural_justification": "Processor A models a canonical 5-qubit 1D linear transmon manifold. Its nearest-neighbor 1D topology provides maximum physical simplicity and minimal parasitic bus coupling, but imposes a strict diameter of 4, necessitating linear SWAP chain routing for non-adjacent entanglement."
+}

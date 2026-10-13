@@ -1,0 +1,19 @@
+processor,num_qubits,topology,optimization_level,routing_method,original_depth,transpiled_depth,depth_expansion_ratio,original_cx,transpiled_cx,estimated_swaps,total_gates,gate_count_rz,gate_count_sx,gate_count_x
+Processor_A_Baseline_5Q,5,Linear Chain,1,sabre,12,52,4.333333333333333,4,31,9,72,31,6,1
+Processor_A_Baseline_5Q,5,Linear Chain,1,lookahead,12,53,4.416666666666667,4,31,9,72,31,6,1
+Processor_A_Baseline_5Q,5,Linear Chain,1,basic,12,61,5.083333333333333,4,37,11,78,31,6,1
+Processor_A_Baseline_5Q,5,Linear Chain,2,sabre,12,45,3.75,4,23,6,59,26,6,1
+Processor_A_Baseline_5Q,5,Linear Chain,2,lookahead,12,45,3.75,4,23,6,59,26,6,1
+Processor_A_Baseline_5Q,5,Linear Chain,2,basic,12,61,5.083333333333333,4,31,9,85,34,15,2
+Processor_A_Baseline_5Q,5,Linear Chain,3,sabre,12,45,3.75,4,23,6,59,26,6,1
+Processor_A_Baseline_5Q,5,Linear Chain,3,lookahead,12,45,3.75,4,23,6,59,26,6,1
+Processor_A_Baseline_5Q,5,Linear Chain,3,basic,12,61,5.083333333333333,4,31,9,85,34,15,2
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,1,sabre,12,45,3.75,4,22,6,63,31,6,1
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,1,lookahead,12,45,3.75,4,22,6,63,31,6,1
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,1,basic,12,52,4.333333333333333,4,31,9,72,31,6,1
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,2,sabre,12,39,3.25,4,19,5,54,25,6,1
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,2,lookahead,12,39,3.25,4,19,5,54,25,6,1
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,2,basic,12,51,4.25,4,19,5,76,34,17,3
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,3,sabre,12,39,3.25,4,19,5,54,25,6,1
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,3,lookahead,12,39,3.25,4,19,5,54,25,6,1
+Processor_B_Contemporary_9Q,9,Sparse Heavy-Hex Inspired,3,basic,12,51,4.25,4,19,5,76,34,17,3

@@ -1,0 +1,62 @@
+[
+  {
+    "line": 11,
+    "label": "RSA KeyGen",
+    "is_vuln": true,
+    "type": "RSA"
+  },
+  {
+    "line": 14,
+    "label": "DSA KeyGen",
+    "is_vuln": true,
+    "type": "DSA"
+  },
+  {
+    "line": 17,
+    "label": "Diffie-Hellman Parameters",
+    "is_vuln": true,
+    "type": "DH"
+  },
+  {
+    "line": 20,
+    "label": "ECC Curve (ec.SECP256R1)",
+    "is_vuln": true,
+    "type": "ECC"
+  },
+  {
+    "line": 23,
+    "label": "ECC Curve (ec.SECP384R1)",
+    "is_vuln": true,
+    "type": "ECC"
+  },
+  {
+    "line": 26,
+    "label": "Ed25519",
+    "is_vuln": true,
+    "type": "ECC"
+  },
+  {
+    "line": 29,
+    "label": "X25519 (ECDH)",
+    "is_vuln": true,
+    "type": "ECC"
+  },
+  {
+    "line": 32,
+    "label": "MD5 Hash",
+    "is_vuln": true,
+    "type": "WEAK_HASH"
+  },
+  {
+    "line": 35,
+    "label": "SHA-1 Hash",
+    "is_vuln": true,
+    "type": "WEAK_HASH"
+  },
+  {
+    "line": 38,
+    "label": "AES-128",
+    "is_vuln": true,
+    "type": "WEAK_SYMMETRIC"
+  }
+]
