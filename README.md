@@ -11,7 +11,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-F59E0B?style=for-the-badge)](LICENSE)
 
 **Official Submission for Qiskit Fall Fest 2026 | SRM University-AP**  
-*Phase 1 — Online Qualification Stage | Qualification Deadline: 14 October 2026*
 
 [Overview](#-overview--challenge-statement) • [Repository Structure](#-authoritative-repository-structure) • [Quickstart](#-quickstart--reproduction-guide) • [Scanner Architecture](#-cryptographic-inventory-scanner-ps-p2) • [Co-Design Benchmark](#-quantum-co-design-benchmark-processor-a-vs-b) • [Results](#-quantitative-results--findings) • [Checklist](#-participant-closing-checklist)
 
@@ -281,19 +280,6 @@ In compliance with **Section 11 (AI/LLM Use Policy)** of the official Qiskit Fal
 
 ---
 
-## ✅ Participant Closing Checklist
-
-- [x] **Exactly ONE Problem Statement Selected**: Track 5: Post-Quantum Cryptography (`PS-P2`).
-- [x] **Core Solution Implemented**: AST & pattern scanner with CycloneDX 1.6 CBOM and NIST FIPS 203/204/205 mapping.
-- [x] **Classical / Theoretical Reference Verification**: Evaluated against ground-truth corpus (100% precision/recall) and classical order finding ($r=4$).
-- [x] **Processor A (5Q) and Processor B (9Q) Defined**: Creative coupling maps and configurations documented in `processors/`.
-- [x] **Transpilation & Routing Completed**: Compiled into $\{rz, sx, x, cx\}$ using SabreRouting at Optimization Level 1, seed 42.
-- [x] **Quantitative Comparison Table Generated**: Documented in `results/tables/processor_comparison.csv`.
-- [x] **Official Synthetic Noise Model Evaluated**: AerSimulator execution across 4,096 shots under depolarizing and readout errors.
-- [x] **Authoritative File Structure Maintained**: Strict compliance with the official Master Guide.
-- [x] **Complete Documentation**: Full `README.md`, `report.md`, and executable `main.ipynb` with all outputs.
-
----
 
 <div align="center">
 <b>SRM University-AP | Qiskit Fall Fest 2026 | Hackathon & Competitions Cell</b>
